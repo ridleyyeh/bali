@@ -1,0 +1,317 @@
+@charset "UTF-8";
+* {
+  font-family: var(--chinesefont);
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --englishfont: "Space Grotesk", sans-serif;
+  --chinesefont: "IBM Plex Sans JP", sans-serif;
+  --bordercolor: #e9edf2;
+  --servicebgcolor: #f4f4f4;
+  --pricecolor: #c7002e;
+  --linkcolor: #0094c8;
+}
+
+body {
+  padding-top: 90px;
+  overflow-x: hidden;
+}
+
+.navigation-bar {
+  display: flex;
+  align-items: center;
+  max-height: 30px;
+  padding: 12px 42px;
+  border-bottom: 1px solid var(--bordercolor);
+}
+.navigation-bar .nb-1,
+.navigation-bar .nb-2 {
+  text-decoration: none;
+  color: #999999;
+}
+.navigation-bar .nb-1:nth-of-type(2),
+.navigation-bar .nb-2:nth-of-type(2) {
+  color: #000000;
+  font-weight: 500;
+  font-size: 12px;
+}
+.navigation-bar .nb-1 p,
+.navigation-bar .nb-2 p {
+  font-size: 11px;
+}
+.navigation-bar p {
+  font-size: 11px;
+  padding: 0 3px;
+}
+
+.product-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 70px;
+}
+.product-title h1 {
+  font-size: 40px;
+}
+.product-title p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.login-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 80%;
+  margin: 40px auto;
+}
+.login-section .login-title {
+  width: 100%;
+  padding: 60px 0 40px;
+}
+.login-section .login-title h2 {
+  text-align: center;
+  font-size: 26px;
+}
+.login-section .login-block {
+  display: flex;
+  align-items: flex-start;
+}
+.login-section .login-block .login-left {
+  width: 50%;
+  padding: 0 60px;
+  border-right: 2px solid #f4f4f4;
+}
+.login-section .login-block .login-left h2 {
+  font-size: 16px;
+}
+.login-section .login-block .login-left form input[type=email],
+.login-section .login-block .login-left form input[type=password] {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background-color: #f4f4f4;
+  padding: 14px 16px;
+  margin: 10px 0;
+}
+.login-section .login-block .login-left form .policy {
+  width: 100%;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+.login-section .login-block .login-left form .policy input[type=checkbox] {
+  margin-right: 5px;
+}
+.login-section .login-block .login-left form .policy a {
+  color: var(--linkcolor);
+  font-size: 16px;
+}
+.login-section .login-block .login-left form p {
+  color: #999999;
+  font-size: 11px;
+}
+.login-section .login-block .login-left .forgot-password {
+  width: 100%;
+  margin: 10px 0;
+}
+.login-section .login-block .login-left .forgot-password a {
+  text-decoration: none;
+  color: var(--linkcolor);
+}
+.login-section .login-block .login-left button {
+  background-color: #c7c7c7;
+  color: #fff;
+  border: 2px solid #c7c7c7;
+  pointer-events: none;
+  width: 100%;
+  padding: 10px 0;
+}
+.login-section .login-block .login-left hr {
+  margin: 40px 0;
+  border: 1px solid #f4f4f4;
+}
+.login-section .login-block .login-left .login-register {
+  margin: 10px 0;
+}
+.login-section .login-block .login-left .login-register h3 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+.login-section .login-block .login-left .login-register a {
+  outline: none;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  border: 1px solid #000;
+  color: #000;
+  background-color: transparent;
+  padding: 18px 0;
+  text-align: center;
+}
+.login-section .login-block .login-left .login-register a:hover {
+  background-color: #000;
+  color: #f4f4f4;
+}
+.login-section .login-block .login-providers {
+  width: 50%;
+}
+.login-section .login-block .login-providers h2 {
+  text-align: center;
+}
+
+.login-copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  margin-top: 100px;
+}
+.login-copyright a,
+.login-copyright p {
+  text-decoration: none;
+  font-size: 11px;
+  color: #666666;
+}
+
+.expand-section {
+  max-width: 55%;
+  margin: 0 auto;
+  padding: 80px 0 30px;
+}
+.expand-section .expand-title {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.expand-section .expand-title h2 {
+  text-align: center;
+  font-size: 26px;
+}
+.expand-section .expand-block {
+  width: 100%;
+}
+.expand-section .expand-block .expand-question {
+  border-top: 1px solid #e3e3e3;
+  padding: 30px 30px 30px 70px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.expand-section .expand-block .expand-question h3 {
+  font-size: 14px;
+  padding-top: 2px;
+  font-weight: 500;
+}
+.expand-section .expand-block .expand-question h3::before {
+  content: "Q";
+  position: absolute;
+  display: inline-block;
+  top: 30px;
+  left: 20px;
+  background-color: #000;
+  color: #fff;
+  padding: 1px 7px;
+  margin-right: 10px;
+}
+.expand-section .expand-block .expand-question .plus {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  /* 當展開時，旋轉垂直線讓其與水平線重疊 */
+}
+.expand-section .expand-block .expand-question .plus::before, .expand-section .expand-block .expand-question .plus::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #000;
+  transition: transform 0.3s ease; /* 平滑動畫效果 */
+}
+.expand-section .expand-block .expand-question .plus::before {
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%; /* 垂直線 */
+}
+.expand-section .expand-block .expand-question .plus::after {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px; /* 水平線 */
+}
+.expand-section .expand-block .expand-question .plus.active::before {
+  transform: rotate(90deg);
+}
+.expand-section .expand-block .expand-answer {
+  background-color: #f8f9fa;
+  padding: 0 30px 0 70px; /* 初始 padding 為 0 */
+  position: relative;
+  border-bottom: 1px solid #e3e3e3;
+  max-height: 0; /* 初始高度為 0 */
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease; /* 添加過渡效果 */
+}
+.expand-section .expand-block .expand-answer.show {
+  padding: 30px 30px 30px 70px; /* 展開時的內距 */
+  max-height: 300px; /* 最大展開高度，根據需要調整 */
+}
+.expand-section .expand-block .expand-answer p {
+  font-size: 14px;
+}
+.expand-section .expand-block .expand-answer p::before {
+  content: "A";
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  display: inline-block;
+  color: #c7002e;
+  font-size: 14px;
+  padding: 0 7px;
+  margin-right: 20px;
+}
+.expand-section .expand-block .expand-answer p a {
+  color: var(--linkcolor);
+  text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 65px;
+  }
+  .navigation-bar {
+    padding: 8px 32px;
+  }
+  .product-title h1 {
+    font-size: 24px;
+  }
+  .product-title p {
+    font-size: 12px;
+  }
+  .login-section .login-block {
+    flex-direction: column;
+  }
+  .login-section .login-block .login-left {
+    border: none;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .login-section .login-block .login-providers {
+    width: 100%;
+  }
+  .login-section .login-copyright {
+    margin: 50px 0 0;
+  }
+  .expand-section {
+    max-width: 100%;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .login-section {
+    max-width: 100%;
+  }
+}/*# sourceMappingURL=main.css.map */
